@@ -1,5 +1,14 @@
 2017-10-20  Adhemerval Zanella  <adhemerval.zanella@linaro.org>
 
+	* sysdeps/arm/arm-ifunc.h: New file.
+	* sysdeps/arm/armv7/multiarch/ifunc-memcpy.h: Likewise.
+	* sysdeps/arm/armv7/multiarch/memcpy.c: Likewise.
+	* sysdeps/arm/armv7/multiarch/memcpy_arm.S: Likewise.
+	* sysdeps/arm/armv7/multiarch/rtld-memcpy.S: Likewise.
+	* sysdeps/arm/armv7/multiarch/Makefile [$(subdir) = string]
+	(sysdep_routines): Add memcpy_arm.
+	* sysdeps/arm/armv7/multiarch/memcpy.S: Remove file.
+
 	* configure.ac (libc_cv_gcc_incompatbile_alias): New define:
 	indicates whether compiler emits an warning for alias for
 	functions with incompatible types.
