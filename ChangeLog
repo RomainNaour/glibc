@@ -171,6 +171,8 @@
 	* localedata/SUPPORTED: Add mjw_IN/UTF-8.
 	* localedata/locales/mjw_IN: New file.
 
+=======
+>>>>>>> Avoid build multiarch if compiler warns about mismatched alias
 2017-10-18  Joseph Myers  <joseph@codesourcery.com>
 
 	* sysdeps/ieee754/ldbl-128/Makeconfig: New file.
