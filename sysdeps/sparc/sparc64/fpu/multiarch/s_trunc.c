@@ -16,17 +16,11 @@
    License along with the GNU C Library; if not, see
    <http://www.gnu.org/licenses/>.  */
 
-#ifdef HAVE_AS_VIS3_SUPPORT
-# include <sparc-ifunc.h>
-# include <math.h>
+#include <sparc-ifunc.h>
+#include <math.h>
 
 extern double __trunc_vis3 (double);
 extern double __trunc_generic (double);
 
 sparc_libm_ifunc(__trunc, hwcap & HWCAP_SPARC_VIS3 ? __trunc_vis3 : __trunc_generic);
 weak_alias (__trunc, trunc)
-
-# define __trunc __trunc_generic
-#endif
-
-#include <sysdeps/ieee754/dbl-64/wordsize-64/s_trunc.c>
